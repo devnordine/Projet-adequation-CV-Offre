@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Utilisateur</title>
+    <link rel="stylesheet" href="./css/PageUtilisateur.css">
+</head>
+<body>
+    <form action="../controleur/pageUtilisateur.php" method="POST">
+    <div class="contient">
+        <header>
+            <div class="logo">Logo</div>
+            <div class="barre-outils">
+                <div class="langues">
+                    <button>EN</button>
+                    <button class="actif">FR</button>
+                </div>
+                <div class="utilisateur">
+                    Nom d'utilisateur
+                    <div class="menu-deroulant">
+                        <button class="menu-bouton">
+                            ▼
+                        </button>
+                        <ul class="liste-menu">
+                            <li><button type="submit" name="Paramètres">Paramètres</button></li>
+                            <li><button type="submit" name="Déconnexion">Déconnexion</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="contenu">
+            <div class="contenu-principal">
+                <section class="resume-actions">
+                    <h2>Résumé des dernières actions</h2>
+                    <div class="actions">
+                        <div class="action">
+                            <span class="icone">📊</span>
+                            <p>Analyse rapide des performances de vos candidatures.</p>
+                        </div>
+                        <div class="action">
+                            <span class="icone">📊</span>
+                            <p>Suivi des modifications effectuées sur vos documents.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="cartes">
+                    <div class="bienvenue">
+                        <h1>Bienvenue Nom d’utilisateur</h1>
+                        <p class="accroche">
+                            Transformez chaque candidature en opportunité : créez un CV percutant et une lettre de motivation sur-mesure adaptés à l'offre d'emploi de vos rêves !
+                        </p>
+                    </div>
+                    <div class="carte">
+                        <h3>Historique des CV</h3>
+                        <p>Vos CV précédents : consultez, modifiez et réutilisez facilement vos créations !<br></p>
+                        <a><button type="submit" name="Continue">Continuer →</button></a>
+                    </div>
+                    <div class="carte">
+                        <h3>Analyse de CV</h3>
+                        <p><br>Analysez votre CV : obtenez des conseils personnalisés pour l’optimiser et décrocher le poste idéal !</br></p>
+                        <a><button type="submit" name="Continuer">Continuer →</button></a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

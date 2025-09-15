@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.contient {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.barre-outils {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 90px;
+}
+
+.langues button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.langues .actif {
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+.utilisateur {
+    position: relative;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-deroulant {
+    position: relative;
+}
+
+.menu-bouton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.liste-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.liste-menu li {
+    padding: 5px 10px;
+}
+
+.liste-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.liste-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+.menu-deroulant:hover .liste-menu {
+    display: block;
+}
+
+
+.contenu {
+    flex: 1;
+    padding: 10px;
+    margin-right: 50px;
+    margin-left: 50px ;
+}
+
+.accroche {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    max-width: 100%;
+    text-align: justify;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+   
+    margin: 20px auto;
+   
+    line-height: 1.6;
+}
+
+.bienvenue{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+
+.bienvenue h1 {
+    font-size: 24px;
+    color: #6c63ff;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 45px;
+
+}
+
+.bienvenue hr {
+    border: 1px solid #d0d0d0;
+}
+
+.contenu-principal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.resume-actions {
+    flex: 0.5;
+    background-color: #e0f7f7;
+    padding: 10px;
+    border: 1px solid #d0e7e7;
+    border-radius: 8px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+}
+
+.resume-actions h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.actions .action {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.action .icone {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.cartes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 40px;
+}
+
+.carte {
+    background-color: #e0f7f7;
+    padding: 20px;
+    border: 1px solid #d0e7e7;
+    border-radius: 8px;
+    height: 30vh; 
+    margin-bottom: 30px;
+}
+
+.icone{
+    width: 50px;
+}
+
+.action p{
+    font-size: 20px;
+}
+
+.carte h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.carte p {
+    font-size: 27px;
+    margin-bottom: 40px;
+    margin-top: 25px;
+  
+
+}
+
+button {
+    font-size: 30px;
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #4caf50;
+}
+
+
+button:hover {
+    text-decoration: underline;
+}

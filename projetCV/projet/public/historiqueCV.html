@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Historique de vos CV</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav class="barre-navigation">
+            <div class="langue">
+                <button aria-label="changer en Anglais">EN</button>
+                <button class="actif" aria-label="Langue actuelle : Français">FR</button>
+            </div>
+            <div class="utilisateur">
+                Nom d'utilisateur
+                <div class="menu-deroulant">
+                    <button class="menu-bouton">
+                        ▼
+                    </button>
+                    <ul class="liste-menu">
+                        <li><a href="#">Profil</a></li>
+                        <li><a href="#">Paramètres</a></li>
+                        <li><a href="#">Déconnexion</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+
+    <h1 data-translate="Historique de vos CV">Historique de vos CV</h1>
+    <table>
+        <thead>
+            <tr>
+                <th data-translate="Vos CV">Vos CV</th>
+                <th data-translate="Actions">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="cv-list">
+            <!-- Les lignes seront générées dynamiquement -->
+        </tbody>
+    </table>
+
+    <script>
+        // Simuler des données depuis une base de données (vous remplacerez ceci par des données réelles via une API)
+        const cvData = [
+            { id: 1, name: "CV_John_Doe.pdf" },
+            { id: 2, name: "CV_Jane_Smith.pdf" },
+            { id: 3, name: "CV_Alex_Johnson.pdf" },
+            { id: 4, name: "CV_Maria_Lopez.pdf" },
+        ];
+
+        // Fonction pour générer les lignes du tableau
+        function loadCvData() {
+            const tableBody = document.getElementById("cv-list");
+
+            cvData.forEach(cv => {
+                const row = document.createElement("tr");
+
+                // Nom du fichier
+                const nameCell = document.createElement("td");
+                nameCell.textContent = cv.name;
+                row.appendChild(nameCell);
+
+                // Actions
+                const actionsCell = document.createElement("td");
+                actionsCell.classList.add("actions");
+
+                // Icône Visualiser
+                const viewIcon = document.createElement("img");
+                viewIcon.src = "https://img.icons8.com/material-outlined/24/000000/visible.png";
+                viewIcon.alt = "Voir";
+                viewIcon.className = "icon";
+                viewIcon.addEventListener("click", () => alert(`Visualiser le CV : ${cv.name}`));
+
+                // Icône Modifier
+                const editIcon = document.createElement("img");
+                editIcon.src = "https://img.icons8.com/material-outlined/24/000000/edit.png";
+                editIcon.alt = "Modifier";
+                editIcon.className = "icon";
+                editIcon.addEventListener("click", () => alert(`Modifier le CV : ${cv.name}`));
+
+                // Icône Télécharger
+                const downloadIcon = document.createElement("img");
+                downloadIcon.src = "https://img.icons8.com/material-outlined/24/000000/download.png";
+                downloadIcon.alt = "Télécharger";
+                downloadIcon.className = "icon";
+                downloadIcon.addEventListener("click", () => alert(`Télécharger le CV : ${cv.name}`));
+
+                // Icône Supprimer
+                const deleteIcon = document.createElement("img");
+                deleteIcon.src = "https://img.icons8.com/material-outlined/24/000000/trash.png";
+                deleteIcon.alt = "Supprimer";
+                deleteIcon.className = "icon";
+                deleteIcon.addEventListener("click", () => {
+                    if (confirm(`Voulez-vous supprimer le CV : ${cv.name} ?`)) {
+                        alert(`Le CV ${cv.name} a été supprimé.`);
+                    }
+                });
+
+                // Ajouter les icônes à la cellule d'actions
+                actionsCell.appendChild(viewIcon);
+                actionsCell.appendChild(editIcon);
+                actionsCell.appendChild(downloadIcon);
+                actionsCell.appendChild(deleteIcon);
+
+                row.appendChild(actionsCell);
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Charger les données après le chargement de la page
+        document.addEventListener("DOMContentLoaded", loadCvData);
+    </script>
+</body>
+</html>
